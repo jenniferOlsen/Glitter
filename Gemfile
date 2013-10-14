@@ -1,13 +1,17 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
 gem 'rails', '3.2.13'
-gem 'bootstrap-sass', '2.0.0'
+gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do 
-  gem 'rspec-rails', '2.9.0'
+  gem 'rspec-rails'
   gem 'sqlite3', '1.3.5'
   gem 'guard-rspec', '0.5.5'
   gem 'annotate', '~> 2.4.1.beta'
@@ -27,9 +31,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'turbolinks', '1.1.1'
+gem 'jbuilder', '1.0.2'
 
 group :test do
-  gem 'rspec-rails', '2.9.0'
+  gem 'rspec-rails'
   gem 'capybara', '1.1.2'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
@@ -41,7 +47,9 @@ end
 
 group :production do
   gem 'pg', '0.12.2'
+  gem 'rails_12factor', '0.0.2'
 end  
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
