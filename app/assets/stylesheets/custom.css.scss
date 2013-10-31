@@ -2,6 +2,8 @@
 
 /* Variables, Mixins, etc */
 $grayMediumLight: #eaeaea;
+$rubyRed: rgba(169,3,41,1);
+$rubyGreen: #02A983;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -27,10 +29,31 @@ textarea {
   resize: vertical;
 }
 
+a {
+  color: $rubyRed;
+  &:hover {
+    color: $rubyGreen;
+  }
+}
+
+.btn-primary {
+  background: $rubyGreen;
+  a {
+    color: white !important;
+  }
+  &:hover {
+    background: $rubyRed;
+  }
+}
+
+
 .center {
   text-align: center;
   h1 {
     margin-bottom: 10px;
+  }
+  h2 a {
+    color: $rubyRed;
   }
 }
 
@@ -79,6 +102,39 @@ p {
     text-decoration: none;
   }
 }
+
+.navbar-inverse .navbar-inner {
+  background: $rubyRed;
+  background: -moz-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+  background: -webkit-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -o-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -ms-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: linear-gradient(to bottom, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=0 );
+
+  border: 0px;
+
+  .nav li a {
+    color: white;
+    &:hover {
+      color: $grayLighter;
+    }
+  }
+
+  .nav li.dropdown.open .dropdown-toggle {
+    background-color: $rubyRed;
+  }
+}  
+
+.dropdown-menu {
+  background-color: $rubyRed;
+  li a:hover {
+    background-color:$rubyGreen;
+    background-image: none;
+  }
+}
+
 
 /* Footer */
 footer {
@@ -143,7 +199,7 @@ aside {
     }
     &:hover {
       text-decoration: none;
-      color: $blue;
+      color: $rubyRed;
     }
   }
   strong {
