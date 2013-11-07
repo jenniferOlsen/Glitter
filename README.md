@@ -1,3 +1,3 @@
-# Ruby on Rails Tutorial: Sample Application
+# Glitter
 
-This is the sample application from Michael Hartl's Ruby on Rails Tutorial, second edition.
+This is a Twitter clone based on the sample application from Michael Hartl's Ruby on Rails Tutorial, second edition.
